@@ -1,9 +1,46 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36" version="26.2.13">
   <diagram name="페이지-1" id="3Q36C_E7RlqaJHLFY8Hz">
-    <mxGraphModel>
+    <mxGraphModel dx="1636" dy="1276" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="zJLk5_pyv_oGdSdaerSz-2" value="" style="container=1;collapsible=0;expand=0;recursiveResize=0;html=1;whiteSpace=wrap;strokeColor=#1192E8;fillColor=none;strokeWidth=1" vertex="1" parent="1">
+          <mxGeometry x="34" y="-116" width="400" height="192" as="geometry" />
+        </mxCell>
+        <mxCell id="zJLk5_pyv_oGdSdaerSz-3" value="Public Network" style="shape=rect;fillColor=none;aspect=fixed;resizable=0;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;strokeColor=none;part=1;spacingLeft=5;fontSize=14;" vertex="1" parent="zJLk5_pyv_oGdSdaerSz-2">
+          <mxGeometry width="48" height="48" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zJLk5_pyv_oGdSdaerSz-4" value="" style="fillColor=#1192E8;shape=mxgraph.ibm_cloud.network--public;strokeColor=none;dashed=0;outlineConnect=0;html=1;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;part=1;movable=0;resizable=0;rotatable=0;" vertex="1" parent="zJLk5_pyv_oGdSdaerSz-3">
+          <mxGeometry width="24" height="24" relative="1" as="geometry">
+            <mxPoint x="12" y="12" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="zJLk5_pyv_oGdSdaerSz-5" value="" style="shape=rect;fillColor=#1192E8;aspect=fixed;resizable=0;labelPosition=right;verticalLabelPosition=middle;align=left;verticalAlign=middle;strokeColor=none;part=1;spacingLeft=5;fontSize=14;" vertex="1" parent="zJLk5_pyv_oGdSdaerSz-2">
+          <mxGeometry width="4" height="48" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="zJLk5_pyv_oGdSdaerSz-6" value="" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;strokeColor=none;fillColor=#00BEF2;shape=mxgraph.azure.azure_instance;" vertex="1" parent="zJLk5_pyv_oGdSdaerSz-2">
+          <mxGeometry x="9" y="9" width="30" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="zJLk5_pyv_oGdSdaerSz-8" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="zJLk5_pyv_oGdSdaerSz-2">
+          <mxGeometry x="17" y="51" width="367" height="124" as="geometry" />
+        </mxCell>
+        <mxCell id="zJLk5_pyv_oGdSdaerSz-7" value="" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/ai_machine_learning/Azure_OpenAI.svg;" vertex="1" parent="zJLk5_pyv_oGdSdaerSz-2">
+          <mxGeometry x="26" y="57" width="29" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="zJLk5_pyv_oGdSdaerSz-13" value="text-embedding-3-large" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/ai_machine_learning/Language_Understanding.svg;" vertex="1" parent="zJLk5_pyv_oGdSdaerSz-2">
+          <mxGeometry x="96" y="79" width="52" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="zJLk5_pyv_oGdSdaerSz-14" value="gpt-4o" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/ai_machine_learning/AI_Studio.svg;" vertex="1" parent="zJLk5_pyv_oGdSdaerSz-2">
+          <mxGeometry x="255" y="79" width="48.93" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="zJLk5_pyv_oGdSdaerSz-11" value="" style="strokeColor=#dddddd;shadow=1;strokeWidth=1;rounded=1;absoluteArcSize=1;arcSize=2;" vertex="1" parent="1">
+          <mxGeometry x="-12" y="223" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="zJLk5_pyv_oGdSdaerSz-12" value="Speech-to-text" style="editableCssRules=.*;html=1;fontColor=#999999;shape=image;verticalLabelPosition=middle;verticalAlign=middle;labelPosition=right;align=left;spacingLeft=20;part=1;points=[];imageAspect=0;image=data:image/svg+xml,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnY9Imh0dHBzOi8vdmVjdGEuaW8vbmFubyIgd2lkdGg9IjE4IiBoZWlnaHQ9IjIwIiB2aWV3Qm94PSIwIDAgMTggMjAiPiYjeGE7CTxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+JiN4YTsJLnN0MHtmaWxsOiM0Mjg1ZjQ7fSYjeGE7CS5zdDF7ZmlsbDojNjY5ZGY2O30mI3hhOwk8L3N0eWxlPiYjeGE7CTxwYXRoIGNsYXNzPSJzdDAiIGQ9Ik04IDBoMnYyMEg4ek00IDZoMnY4SDR6bTggMGgydjhoLTJ6TTAgM2gydjE0SDB6bTE2IDBoMnYxNGgtMnoiLz4mI3hhOwk8cGF0aCBjbGFzcz0ic3QxIiBkPSJNOCAwaDJ2MTBIOHpNNCA2aDJ2NEg0em04IDBoMnY0aC0yek0wIDNoMnY3SDB6bTE2IDBoMnY3aC0yeiIvPiYjeGE7PC9zdmc+;" vertex="1" parent="zJLk5_pyv_oGdSdaerSz-11">
+          <mxGeometry width="27" height="30" relative="1" as="geometry">
+            <mxPoint x="16" y="15" as="offset" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
