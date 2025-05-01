@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36" version="26.2.14">
+  <diagram id="your-diagram-id" name="Microservices Architecture">
+    <mxGraphModel dx="2678" dy="1436" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="frontend" value="Frontend Service&#xa;(mvp_frontend)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="20" y="470" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="nginx" value="Nginx&#xa;Reverse Proxy" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="240" y="470" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="apigw" value="API Gateway&#xa;(mvp_apigw)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" parent="1" vertex="1">
+          <mxGeometry x="414" y="470" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="keycloak" value="Keycloak&#xa;Auth Service" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="240" y="630" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="baseinfo" value="Baseinfo Service&#xa;(mvp_baseinfo_backend)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="630" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="custinfo" value="Custinfo Service&#xa;(mvp_custinfo_backend)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="630" y="330" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ppon_pub" value="Ppon Pub Service&#xa;(mvp_ppon_pub_backend)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="620" y="470" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ppon_sub" value="Ppon Sub Service&#xa;(mvp_ppon_sub_backend)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="610" y="620" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mysql" value="MySQL&#xa;(helm-db-mariadb)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="1241" y="70" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="redis" value="Redis&#xa;(redis-az01-sbox-poc-115)" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="1170" y="570" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka" value="Kafka&#xa;Event Broker" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
+          <mxGeometry x="1040" y="850" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="baseinfo-redis" value="1. Cache Check" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;dashed=1;" parent="1" source="baseinfo" target="redis" edge="1">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="custinfo-redis" value="1. Cache Check" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;dashed=1;" parent="1" source="custinfo" target="redis" edge="1">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ppon_pub-redis" value="1. Cache Check" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;dashed=1;" parent="1" source="ppon_pub" target="redis" edge="1">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ppon_sub-redis" value="1. Cache Check" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;dashed=1;" parent="1" source="ppon_sub" target="redis" edge="1">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="baseinfo-mysql" value="2. Cache Miss" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" parent="1" source="baseinfo" target="mysql" edge="1">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="custinfo-mysql" value="2. Cache Miss" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" parent="1" source="custinfo" target="mysql" edge="1">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ppon_pub-mysql" value="2. Cache Miss" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" parent="1" source="ppon_pub" target="mysql" edge="1">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ppon_sub-mysql" value="2. Cache Miss" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" parent="1" source="ppon_sub" target="mysql" edge="1">
+          <mxGeometry x="-0.2" y="10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="redis-mysql" value="3. Cache Update" style="endArrow=classic;html=1;exitX=0.5;exitY=0;entryX=0.5;entryY=1;dashed=1;" parent="1" source="redis" target="mysql" edge="1">
+          <mxGeometry x="-0.2" y="-10" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ppon_pub-kafka" value="Publish Events" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;dashed=1;" parent="1" source="ppon_pub" target="kafka" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="kafka-ppon_sub" value="Subscribe Events" style="endArrow=classic;html=1;exitX=0;exitY=0.5;entryX=1;entryY=0.5;dashed=1;" parent="1" source="kafka" target="ppon_sub" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="frontend-nginx" value="" style="endArrow=classic;html=1;entryX=0;entryY=0.5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" parent="1" source="frontend" target="nginx" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="160" y="510" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nginx-apigw" value="/mvp/**" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="nginx" target="apigw" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="300" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nginx-keycloak" value="/auth" style="endArrow=classic;html=1;exitX=0.5;exitY=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitDx=0;exitDy=0;" parent="1" source="nginx" target="keycloak" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="apigw-baseinfo" value="/mvp/baseinfo/**" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" parent="1" source="apigw" target="baseinfo" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="apigw-custinfo" value="/mvp/custinfo/**" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" parent="1" source="apigw" target="custinfo" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="apigw-ppon_pub" value="/mvp/ppon-pub/**" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" parent="1" source="apigw" target="ppon_pub" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="apigw-ppon_sub" value="/mvp/ppon-sub/**" style="endArrow=classic;html=1;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" parent="1" source="apigw" target="ppon_sub" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="19D7SwjDkh6N3EoWk_cp-1" value="&lt;section style=&quot;border-radius: 4px; margin: 6px 0px; position: relative; scroll-margin-bottom: 40px; scroll-margin-top: 40px; color: rgb(246, 246, 244); font-family: -apple-system, &amp;quot;system-ui&amp;quot;, sans-serif; font-size: 13px; text-align: start; background-color: rgb(38, 38, 38);&quot; data-section-index=&quot;1&quot; data-markdown-raw=&quot;1. 서비스 유형별 색상 구분&lt;br/&gt;   - 파란색: 프론트엔드 서비스&lt;br/&gt;   - 연두색: 프록시 및 이벤트 서비스 (Nginx, Pub/Sub 서비스)&lt;br/&gt;   - 주황색: API Gateway&lt;br/&gt;   - 빨간색: 인증 서비스 (Keycloak)&lt;br/&gt;   - 보라색: 비즈니스 서비스 (Baseinfo, Custinfo)&quot; class=&quot;markdown-section&quot; id=&quot;markdown-section-4120a332-1750-4c1d-8bc6-3a85efb3acff-1&quot;&gt;&lt;ol style=&quot;margin: 0px 0px 0px 16px; padding: 0px;&quot;&gt;&lt;li style=&quot;margin-bottom: 2px !important; margin-top: 2px !important; margin-left: 0px; padding-top: 2px; padding-bottom: 2px; list-style-type: decimal;&quot; value=&quot;1&quot; data-indent=&quot;0&quot;&gt;서비스 유형별 색상&amp;nbsp;구분&lt;/li&gt;&lt;/ol&gt;&lt;ul style=&quot;margin: 0px 0px 0px 16px; padding: 0px;&quot; class=&quot;nested&quot;&gt;&lt;li style=&quot;margin-bottom: 2px !important; margin-top: 2px !important; margin-left: 24px; padding-top: 2px; padding-bottom: 2px; list-style-type: disc;&quot; class=&quot;nested&quot; data-indent=&quot;3&quot;&gt;파란색:&amp;nbsp;프론트엔드 서비스&lt;/li&gt;&lt;/ul&gt;&lt;ul style=&quot;margin: 0px 0px 0px 16px; padding: 0px;&quot; class=&quot;nested&quot;&gt;&lt;li style=&quot;margin-bottom: 2px !important; margin-top: 2px !important; margin-left: 24px; padding-top: 2px; padding-bottom: 2px; list-style-type: disc;&quot; class=&quot;nested&quot; data-indent=&quot;3&quot;&gt;연두색:&amp;nbsp;프록시 및 이벤트&amp;nbsp;서비스 (Nginx, Pub/Sub 서비스)&lt;/li&gt;&lt;/ul&gt;&lt;ul style=&quot;margin: 0px 0px 0px 16px; padding: 0px;&quot; class=&quot;nested&quot;&gt;&lt;li style=&quot;margin-bottom: 2px !important; margin-top: 2px !important; margin-left: 24px; padding-top: 2px; padding-bottom: 2px; list-style-type: disc;&quot; class=&quot;nested&quot; data-indent=&quot;3&quot;&gt;주황색: API&amp;nbsp;Gateway&lt;/li&gt;&lt;/ul&gt;&lt;ul style=&quot;margin: 0px 0px 0px 16px; padding: 0px;&quot; class=&quot;nested&quot;&gt;&lt;li style=&quot;margin-bottom: 2px !important; margin-top: 2px !important; margin-left: 24px; padding-top: 2px; padding-bottom: 2px; list-style-type: disc;&quot; class=&quot;nested&quot; data-indent=&quot;3&quot;&gt;빨간색: 인증 서비스&amp;nbsp;(Keycloak)&lt;/li&gt;&lt;/ul&gt;&lt;ul style=&quot;margin: 0px 0px 0px 16px; padding: 0px;&quot; class=&quot;nested&quot;&gt;&lt;li style=&quot;margin-bottom: 2px !important; margin-top: 2px !important; margin-left: 24px; padding-top: 2px; padding-bottom: 2px; list-style-type: disc;&quot; class=&quot;nested&quot; data-indent=&quot;3&quot;&gt;보라색:&amp;nbsp;비즈니스 서비스&amp;nbsp;(Baseinfo, Custinfo)&lt;/li&gt;&lt;/ul&gt;&lt;/section&gt;&lt;section style=&quot;border-radius: 4px; margin: 6px 0px; position: relative; scroll-margin-bottom: 40px; scroll-margin-top: 40px; color: rgb(246, 246, 244); font-family: -apple-system, &amp;quot;system-ui&amp;quot;, sans-serif; font-size: 13px; text-align: start; background-color: rgb(38, 38, 38);&quot; data-section-index=&quot;2&quot; data-markdown-raw=&quot;2. 선 스타일 설명&lt;br/&gt;   - 실선: HTTP 요청, DB 직접 접근&lt;br/&gt;   - 점선: 캐시 조회/갱신, 이벤트 통신&quot; class=&quot;markdown-section&quot; id=&quot;markdown-section-4120a332-1750-4c1d-8bc6-3a85efb3acff-2&quot;&gt;&lt;ol style=&quot;margin: 0px 0px 0px 16px; padding: 0px;&quot;&gt;&lt;li style=&quot;margin-bottom: 2px !important; margin-top: 2px !important; margin-left: 0px; padding-top: 2px; padding-bottom: 2px; list-style-type: decimal;&quot; value=&quot;2&quot; data-indent=&quot;0&quot;&gt;선&amp;nbsp;스타일 설명&lt;/li&gt;&lt;/ol&gt;&lt;ul style=&quot;margin: 0px 0px 0px 16px; padding: 0px;&quot; class=&quot;nested&quot;&gt;&lt;li style=&quot;margin-bottom: 2px !important; margin-top: 2px !important; margin-left: 24px; padding-top: 2px; padding-bottom: 2px; list-style-type: disc;&quot; class=&quot;nested&quot; data-indent=&quot;3&quot;&gt;실선: HTTP 요청, DB&amp;nbsp;직접 접근&lt;/li&gt;&lt;/ul&gt;&lt;ul style=&quot;margin: 0px 0px 0px 16px; padding: 0px;&quot; class=&quot;nested&quot;&gt;&lt;li style=&quot;margin-bottom: 2px !important; margin-top: 2px !important; margin-left: 24px; padding-top: 2px; padding-bottom: 2px; list-style-type: disc;&quot; class=&quot;nested&quot; data-indent=&quot;3&quot;&gt;점선: 캐시 조회/갱신, 이벤트 통신&lt;/li&gt;&lt;/ul&gt;&lt;/section&gt;&lt;section style=&quot;border-radius: 4px; margin: 6px 0px; position: relative; scroll-margin-bottom: 40px; scroll-margin-top: 40px; color: rgb(246, 246, 244); font-family: -apple-system, &amp;quot;system-ui&amp;quot;, sans-serif; font-size: 13px; text-align: start; background-color: rgb(38, 38, 38);&quot; data-section-index=&quot;3&quot; data-markdown-raw=&quot;3. 데이터 흐름&lt;br/&gt;   - 캐시 흐름:&lt;br/&gt;     1. Redis 캐시 확인&lt;br/&gt;     2. 캐시 미스 시 MySQL 조회&lt;br/&gt;     3. MySQL 데이터로 Redis 갱신&lt;br/&gt;   - 이벤트 기반 통신:&lt;br/&gt;     - Pub 서비스에서 이벤트 발행&lt;br/&gt;     - Sub 서비스에서 이벤트 구독&quot; class=&quot;markdown-section&quot; id=&quot;markdown-section-4120a332-1750-4c1d-8bc6-3a85efb3acff-3&quot;&gt;&lt;ol style=&quot;margin: 0px 0px 0px 16px; padding: 0px;&quot;&gt;&lt;li style=&quot;margin-bottom: 2px !important; margin-top: 2px !important; margin-left: 0px; padding-top: 2px; padding-bottom: 2px; list-style-type: decimal;&quot; value=&quot;3&quot; data-indent=&quot;0&quot;&gt;데이터 흐름&lt;/li&gt;&lt;/ol&gt;&lt;ul style=&quot;margin: 0px 0px 0px 16px; padding: 0px;&quot; class=&quot;nested&quot;&gt;&lt;li style=&quot;margin-bottom: 2px !important; margin-top: 2px !important; margin-left: 24px; padding-top: 2px; padding-bottom: 2px; list-style-type: disc;&quot; class=&quot;nested&quot; data-indent=&quot;3&quot;&gt;캐시&amp;nbsp;흐름:&lt;/li&gt;&lt;/ul&gt;&lt;ol style=&quot;margin: 0px 0px 0px 16px; padding: 0px;&quot; class=&quot;nested&quot;&gt;&lt;li style=&quot;margin-bottom: 2px !important; margin-top: 2px !important; margin-left: 40px; padding-top: 2px; padding-bottom: 2px; list-style-type: decimal;&quot; value=&quot;1&quot; class=&quot;nested&quot; data-indent=&quot;5&quot;&gt;Redis&amp;nbsp;캐시 확인&lt;/li&gt;&lt;/ol&gt;&lt;ol style=&quot;margin: 0px 0px 0px 16px; padding: 0px;&quot; class=&quot;nested&quot;&gt;&lt;li style=&quot;margin-bottom: 2px !important; margin-top: 2px !important; margin-left: 40px; padding-top: 2px; padding-bottom: 2px; list-style-type: decimal;&quot; value=&quot;2&quot; class=&quot;nested&quot; data-indent=&quot;5&quot;&gt;캐시 미스 시 MySQL&amp;nbsp;조회&lt;/li&gt;&lt;/ol&gt;&lt;ol style=&quot;margin: 0px 0px 0px 16px; padding: 0px;&quot; class=&quot;nested&quot;&gt;&lt;li style=&quot;margin-bottom: 2px !important; margin-top: 2px !important; margin-left: 40px; padding-top: 2px; padding-bottom: 2px; list-style-type: decimal;&quot; value=&quot;3&quot; class=&quot;nested&quot; data-indent=&quot;5&quot;&gt;MySQL 데이터로 Redis 갱신&lt;/li&gt;&lt;/ol&gt;&lt;ul style=&quot;margin: 0px 0px 0px 16px; padding: 0px;&quot; class=&quot;nested&quot;&gt;&lt;li style=&quot;margin-bottom: 2px !important; margin-top: 2px !important; margin-left: 24px; padding-top: 2px; padding-bottom: 2px; list-style-type: disc;&quot; class=&quot;nested&quot; data-indent=&quot;3&quot;&gt;이벤트 기반 통신:&lt;/li&gt;&lt;/ul&gt;&lt;ul style=&quot;margin: 0px 0px 0px 16px; padding: 0px;&quot; class=&quot;nested&quot;&gt;&lt;li style=&quot;margin-bottom: 2px !important; margin-top: 2px !important; margin-left: 40px; padding-top: 2px; padding-bottom: 2px; list-style-type: disc;&quot; class=&quot;nested&quot; data-indent=&quot;5&quot;&gt;Pub 서비스에서 이벤트 발행&lt;/li&gt;&lt;/ul&gt;&lt;ul style=&quot;margin: 0px 0px 0px 16px; padding: 0px;&quot; class=&quot;nested&quot;&gt;&lt;li style=&quot;margin-bottom: 2px !important; margin-top: 2px !important; margin-left: 40px; padding-top: 2px; padding-bottom: 2px; list-style-type: disc;&quot; class=&quot;nested&quot; data-indent=&quot;5&quot;&gt;Sub 서비스에서 이벤트 구독&lt;/li&gt;&lt;/ul&gt;&lt;/section&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="830" width="350" height="230" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
